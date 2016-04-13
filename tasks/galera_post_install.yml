@@ -55,6 +55,15 @@
   tags:
     - galera-client-user-config
 
+- name: fix mysql startup timeout
+  lineinfile:
+    dest: /etc/init.d/mysql
+    state: present
+    regexp: '^(.*)MYSQLD_STARTUP_TIMEOUT:-30}(.*)$'
+    line: '\1MYSQLD_STARTUP_TIMEOUT:-300}\2'
+    backup: yes
+    backrefs: yes  
+
 - name: Drop mariadb config(s)
   template:
     src: "mysql_defaults.j2"

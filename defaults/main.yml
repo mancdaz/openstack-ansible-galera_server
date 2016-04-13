@@ -90,8 +90,8 @@ galera_apt_percona_xtrabackup_repo:
   repo: "deb {{ galera_apt_percona_xtrabackup_url }} {{ ansible_distribution_release }} main"
   state: "present"
 
-galera_package_url: "https://www.percona.com/downloads/XtraBackup/Percona-XtraBackup-2.2.13/binary/debian/trusty/x86_64/percona-xtrabackup-22_2.2.13-1.trusty_amd64.deb"
-galera_package_sha256: "2f58eedefa905583f0650f77bb2b149139c4066c7fb690202124fe5c7ac83e9e"
+galera_package_url: "https://www.percona.com/downloads/XtraBackup/Percona-XtraBackup-2.3.4/binary/debian/trusty/x86_64/percona-xtrabackup_2.3.4-1.trusty_amd64.deb"
+galera_package_sha256: "ceeefd0f806d41d55808cd79e27ec95b62f2b0d2918d46b4179257778159b724"
 galera_package_path: "/opt/{{ galera_package_url | basename }}"
 
 # Validate SSL certificates when downloading the galera deb above
